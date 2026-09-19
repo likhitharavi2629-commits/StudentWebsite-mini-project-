@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* TOP TITLE HEADER */
+        .top-header {
+            text-align: center;
+            background: #7b3fc7;
+            color: white;
+            padding: 45px 20px;
+        }
+        .top-header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        .top-header p {
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        /* NAVIGATION BAR */
+        .navbar {
+            background: #5a24a3;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            text-decoration: none;
+            padding: 12px 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background: #471c83;
+            border-radius: 5px;
+        }
+
+        /* CONTENT BOX */
+        .content-box {
+            width: 90%;
+            max-width: 1100px;
+            background: white;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+      .form-vertical {
+    display: flex;
+    flex-direction: column;
+    width: 350px; /* you can increase if needed */
+}
+
+.form-vertical label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-vertical input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    width: 120px;
+}
+
+.footer {
+    text-align: center;
+    background: #5a24a3;
+    color: white;
+    padding: 18px 0;
+    margin-top: 40px;
+    font-size: 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="top-header">
+        <h1>Student Performance Prediction</h1>
+        <p>Welcome</p>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <div class="navbar">
+        <a href="#intro">Introduction</a>
+        <a href="#significance">Significance</a>
+        <a href="#predict">Prediction</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="content-box" id="intro">
+        <h2>Introduction</h2>
+        <p>This student performance prediction application allows you to predict how well a student is likely to perform based on the data you enter about their current performance.</p>
+
+        <ul>
+            <li>Attendance percentage</li>
+            <li>Average test score</li>
+            <li>Homework submission percentage</li>
+            <li>Daily study hours</li>
+            <li>Discipline score</li>
+        </ul>
+    </div>
+
+    <!-- Significance Section -->
+    <div class="content-box" id="significance">
+        <h2>Significance</h2>
+<p>In real-world educational systems, students’ marks are influenced by many variables such as study habits, attendance, family background, previous academic scores, and personal interests. By collecting and analyzing this data, machine learning models can identify patterns and help teachers, parents, and institutions take early action to support students who may be at risk of low performance.</p>
+
+        <p>Predicting student performance is useful for:</p>
+        <ul>
+            <li>Identifying slow learners early</li>
+            <li>Providing personalized learning plans</li>
+            <li>Improving teaching strategies</li>
+            <li>Reducing dropout rates</li>
+            <li>Enhancing overall academic quality</li>
+        </ul>
+    </div>
+
+   <div class="content-box" id="predict">
+    <h2>Student Performance Prediction</h2>
+    <form action="/predict" method="POST" class="form-vertical">
+
+        <label>Attendance (%):</label>
+        <input type="number" name="attendance" required>
+
+        <label>Average Test Score:</label>
+        <input type="number" name="score" required>
+
+        <label>Homework Submission (%):</label>
+        <input type="number" name="homework" required>
+
+        <label>Study Hours Per Day:</label>
+        <input type="number" name="hours" required>
+
+        <label>Discipline Score (1–10):</label>
+        <input type="number" name="discipline" min="1" max="10" required>
+
+        <button type="submit" class="submit-btn">Predict</button>
+    </form>
+</div>
+
+<footer class="footer">
+    <p>© 2025 Student Performance Predictor | Designed by CODE CREW <br> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</p>
+</footer>
+
+</body>
+</html>
